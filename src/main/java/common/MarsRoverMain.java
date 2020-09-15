@@ -28,10 +28,8 @@ public class MarsRoverMain {
 		List<List<String>> roverInstructions = Partition.ofSize(roverCommands, 2);
 		for (List<String> instructionSet : roverInstructions) {
 			MarsRover rover = new MarsRover(instructionSet.get(0));
-
 			rover.navigate(instructionSet.get(1), p.getUpperBound());
 			rover.print();
-
 		}
 		reader.close();
 

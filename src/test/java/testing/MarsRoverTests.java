@@ -29,10 +29,10 @@ public class MarsRoverTests {
 		List<List<String>> roverInstructions = Partition.ofSize(roverCommands, 2);
 		MarsRover rover0 = new MarsRover(roverInstructions.get(0).get(0));
 		rover0.navigate(roverInstructions.get(0).get(1), p.getUpperBound());
-		assertEquals(rover0.printStr(), "1 3 N", "Rover 0 Was expected to be at location 1 3 N");
-		MarsRover rover1 = new MarsRover(roverInstructions.get(0).get(0));
-		rover1.navigate(roverInstructions.get(0).get(1), p.getUpperBound());
-		assertEquals(rover1.printStr(), "5 1 E", "Rover 1 Was expected to be at location 5 1 E");
+		assertEquals("Rover 0 Was expected to be at location 1 3 N", "1 3 N", rover0.printStr());
+		MarsRover rover1 = new MarsRover(roverInstructions.get(1).get(0));
+		rover1.navigate(roverInstructions.get(1).get(1), p.getUpperBound());
+		assertEquals("Rover 1 Was expected to be at location 5 1 E", "5 1 E", rover1.printStr());
 
 	}
 
@@ -44,7 +44,7 @@ public class MarsRoverTests {
 		List<List<String>> roverInstructions = Partition.ofSize(roverCommands, 2);
 		MarsRover rover0 = new MarsRover(roverInstructions.get(0).get(0));
 		rover0.navigate(roverInstructions.get(0).get(1), p.getUpperBound());
-		assertEquals(rover0.printStr(), "0 2 W", "Rover 0 Was expected to be at location 0 2 W");
+		assertEquals("Rover 0 Was expected to be at location 0 2 W", "0 2 W", rover0.printStr());
 
 
 	}
