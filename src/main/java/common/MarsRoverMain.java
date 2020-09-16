@@ -14,7 +14,7 @@ public class MarsRoverMain {
 	public static void main(String[] args) throws IOException {
 		// READ INPUT TEXT FROM input.txt in src/main/resources
 		ClassLoader classLoader = MarsRoverMain.class.getClassLoader();
-		File file = new File(classLoader.getResource("input1.txt").getFile());
+		File file = new File(classLoader.getResource("input.txt").getFile());
 		InputStream inputStream = new FileInputStream(file);
 		InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
 		BufferedReader reader = new BufferedReader(streamReader);
